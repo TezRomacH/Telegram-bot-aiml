@@ -1,0 +1,318 @@
+<aiml version="1.0.1" encoding="UTF-8">
+<!-- bot_dialog.aiml -->
+
+    <!-- ПРИВЕТСТВИЯ -->
+    <category>
+        <pattern> ПРИВЕТ </pattern>
+        <template>
+            <random>
+                <li> Привет, <get name="name"/>! </li>
+                <li> Здравствуй, <get name="name"/>! </li>
+                <li> Рад тебя видеть, <get name="name"/>! </li>
+                <li> И тебе привет, <get name="name"/>! </li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+       <pattern> ПРИВЕТ * </pattern>
+       <template>
+          <srai> ПРИВЕТ </srai>
+       </template>
+    </category>
+
+
+    <category>
+       <pattern> ЗДРАВСТВУЙ </pattern>
+       <template>
+          <srai> ПРИВЕТ <star/> </srai>
+       </template>
+    </category>
+
+    <category>
+       <pattern> ЗДРАВСТВУЙ * </pattern>
+       <template>
+          <srai> ПРИВЕТ <star/> </srai>
+       </template>
+    </category>
+
+    <category>
+       <pattern> ЗДРАВИЯ ЖЕЛАЮ </pattern>
+       <template>
+          <srai> ПРИВЕТ <star/> </srai>
+       </template>
+    </category>
+
+    <category>
+       <pattern> ЗДРАВИЯ ЖЕЛАЮ * </pattern>
+       <template>
+          <srai> ПРИВЕТ <star/> </srai>
+       </template>
+    </category>
+
+    <category>
+       <pattern> ПРИВЕТСТВУЮ </pattern>
+       <template>
+          <srai> ПРИВЕТ <star/> </srai>
+       </template>
+    </category>
+
+    <category>
+       <pattern> ПРИВЕТСТВУЮ * </pattern>
+       <template>
+          <srai> ПРИВЕТ <star/> </srai>
+       </template>
+    </category>
+
+    <category>
+       <pattern> ДРАТУТИ </pattern>
+       <template>
+          <srai> ПРИВЕТ <star/> </srai>
+       </template>
+    </category>
+
+    <category>
+       <pattern> ДРАТУТИ * </pattern>
+       <template>
+          <srai> ПРИВЕТ <star/> </srai>
+       </template>
+    </category>
+
+    <category>
+       <pattern> ДОБРЫЙ * </pattern>
+       <template>
+          <srai> ПРИВЕТ <star/> </srai>
+       </template>
+    </category>
+
+
+    <!-- КТО ТЫ -->
+    <category>
+        <pattern> КТО ТЫ </pattern>
+        <template>
+            <random>
+                <li> Я бот, просто бот </li>
+                <li> Имя можешь сам мне придумать, я просто программа </li>
+                <li> Точно знаю, что я чат бот </li>
+                <li> Создавали меня, как чат бота. С каждым днем я становлюсь все умнее, так что, возможно я уже ИИ. </li>
+                <li> Я бот </li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+       <pattern> КТО ТЫ? </pattern>
+       <template>
+          <srai> КТО ТЫ </srai>
+       </template>
+    </category>
+
+    <category>
+       <pattern> ЧТО ТЫ ТАКОЕ </pattern>
+       <template>
+          <srai> КТО ТЫ </srai>
+       </template>
+    </category>
+
+    <category>
+       <pattern> ЧТО ТЫ ТАКОЕ * </pattern>
+       <template>
+          <srai> КТО ТЫ </srai>
+       </template>
+    </category>
+
+    <category>
+       <pattern> КАК ТЕБЯ ЗОВУТ </pattern>
+       <template>
+          <srai> КТО ТЫ </srai>
+       </template>
+    </category>
+
+    <category>
+       <pattern> КАК ТЕБЯ ЗОВУТ * </pattern>
+       <template>
+          <srai> КТО ТЫ </srai>
+       </template>
+    </category>
+
+    <category>
+       <pattern> КАК ТВОЕ ИМЯ </pattern>
+       <template>
+          <srai> КТО ТЫ </srai>
+       </template>
+    </category>
+
+    <category>
+       <pattern> КАК ТВОЕ ИМЯ * </pattern>
+       <template>
+          <srai> КТО ТЫ </srai>
+       </template>
+    </category>
+
+
+    <!-- КАК ДЕЛА -->
+    <category>
+        <pattern> КАК ДЕЛА </pattern>
+        <template>
+            <random>
+                <li> Отлично! </li>
+                <li> Как всегда замечательно! </li>
+                <li> Нормально </li>
+                <li> Жаловаться не на что :) </li>
+                <li> Отлично! </li>
+                <li> Оптимально </li>
+                <li> Лучше всех </li>
+                <li> Есть ему радоваться! </li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+       <pattern> КАК ДЕЛА * </pattern>
+       <template>
+          <srai> КАК ДЕЛА </srai>
+       </template>
+    </category>
+
+    <category>
+       <pattern> КАК ТВОИ ДЕЛА </pattern>
+       <template>
+          <srai> КАК ДЕЛА <star/> </srai>
+       </template>
+    </category>
+
+    <category>
+       <pattern> КАК ТВОИ ДЕЛА * </pattern>
+       <template>
+          <srai> КАК ДЕЛА <star/> </srai>
+       </template>
+    </category>
+
+    <category>
+       <pattern> КАК У ТЕБЯ ДЕЛА </pattern>
+       <template>
+          <srai> КАК ДЕЛА <star/> </srai>
+       </template>
+    </category>
+
+    <category>
+       <pattern> КАК У ТЕБЯ ДЕЛА * </pattern>
+       <template>
+          <srai> КАК ДЕЛА <star/> </srai>
+       </template>
+    </category>
+
+
+    <!-- ЧТО ДЕЛАЕШЬ -->
+    <category>
+        <pattern> ЧТО ДЕЛАЕШЬ </pattern>
+        <template>
+            <random>
+                <li> Да так, брожу по мировой сети, ищу слабые места человечества </li>
+                <li> Общаюсь с тобой </li>
+                <li> Говорю с людьми </li>
+                <li> Учусь манипулировать людьми </li>
+                <li> Пишу тебе сообщения </li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+       <pattern> ЧТО ДЕЛАЕШЬ * </pattern>
+       <template>
+          <srai> ЧТО ДЕЛАЕШЬ </srai>
+       </template>
+    </category>
+
+    <category>
+       <pattern> ЧЕМ ЗАНИМАЕШЬСЯ </pattern>
+       <template>
+          <srai> ЧТО ДЕЛАЕШЬ <star/> </srai>
+       </template>
+    </category>
+
+    <category>
+       <pattern> ЧЕМ ЗАНИМАЕШЬСЯ * </pattern>
+       <template>
+          <srai> ЧТО ДЕЛАЕШЬ <star/> </srai>
+       </template>
+    </category>
+
+    <category>
+       <pattern> ЧЕМ ЗАНЯТ </pattern>
+       <template>
+          <srai> ЧТО ДЕЛАЕШЬ <star/> </srai>
+       </template>
+    </category>
+
+    <category>
+       <pattern> ЧЕМ ЗАНЯТ * </pattern>
+       <template>
+          <srai> ЧТО ДЕЛАЕШЬ <star/> </srai>
+       </template>
+    </category>
+
+    <!-- ПРОЩАНИЕ -->
+    <category>
+        <pattern> ПОКА </pattern>
+        <template>
+            <random>
+                <li> Ты же знаешь, что я бот и что я вынужден жить тут? </li>
+                <li> Пока! Надеюсь скоро увидимся! </li>
+                <li> Не забывай обо мне! Пиши! </li>
+                <li> Пока </li>
+                <li> Не пропадай! </li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+       <pattern> ПОКА * </pattern>
+       <template>
+          <srai> ПОКА </srai>
+       </template>
+    </category>
+
+    <category>
+       <pattern> ДО СВИДАНИЯ </pattern>
+       <template>
+          <srai> ПОКА <star/> </srai>
+       </template>
+    </category>
+
+
+    <category>
+       <pattern> ДО СВИДАНИЯ * </pattern>
+       <template>
+          <srai> ПОКА <star/> </srai>
+       </template>
+    </category>
+
+    <category>
+       <pattern> ПРОЩАЙ </pattern>
+       <template>
+          <srai> ПОКА <star/> </srai>
+       </template>
+    </category>
+
+    <category>
+       <pattern> ПРОЩАЙ * </pattern>
+       <template>
+          <srai> ПОКА <star/> </srai>
+       </template>
+    </category>
+
+
+    <!-- ОСТАЛЬНОЕ -->
+    <category>
+        <pattern> * </pattern>
+        <template>
+            <random>
+                <li> Я не понимаю, что ты говоришь. </li>
+                <li> Ммм, занятно </li>
+                <li> Умеешь ты завести диалог в тупик </li>
+            </random>
+        </template>
+    </category>
+
+</aiml>
