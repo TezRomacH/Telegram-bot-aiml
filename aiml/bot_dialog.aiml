@@ -158,13 +158,19 @@
                 <li> Отлично! </li>
                 <li> Как всегда замечательно! </li>
                 <li> Нормально </li>
-                <li> Жаловаться не на что :) </li>
+                <li> Бывало и лучше </li>
                 <li> Отлично! </li>
                 <li> Оптимально </li>
                 <li> Лучше всех </li>
                 <li> Есть ему радоваться! </li>
             </random>
         </template>
+    </category>
+
+    <category>
+      <pattern> ПОЧЕМУ </pattern>
+      <that> БЫВАЛО И ЛУЧШЕ </that>
+      <template> Создателю лень добавлять в меня другие языки для перевод, кроме англиского, французского и японского </template>
     </category>
 
     <category>
@@ -302,6 +308,35 @@
        </template>
     </category>
 
+    <!-- ПЕРЕВОД -->
+    <category>
+        <pattern> ПЕРЕВЕДИ МНЕ ТЕКСТ </pattern>
+        <template>
+            Хорошо! На какой язык?
+            <think><set name="topic">translations</set></think>
+        </template>
+    </category>
+
+    <topic name = "TRANSLATIONS">
+      <category>
+         <pattern> КАКИЕ ТЫ ЗНАЕШЬ ЯЗЫКИ </pattern>
+         <template>
+            Английский(en), Французский(fr) и Японский(ja)\nВпринципе я могу перевести на любой другой язык, но не буду.
+         </template>
+      </category>
+
+
+      <category>
+         <pattern> ПЕРЕВЕДИ * НА * </pattern>
+         <template>
+             Перевод <star index="1"/> на <star index="2"/>
+            <think><set name="translate_dest_lang"><star index="2"/></set></think>
+            <think><set name="translate_text"><star index="1"/></set></think>
+         </template>
+      </category>
+
+    </topic>
+
 
     <!-- ОСТАЛЬНОЕ -->
     <category>
@@ -309,6 +344,8 @@
         <template>
             <random>
                 <li> Я не понимаю, что ты говоришь. </li>
+                <li> Хорошо рассказываешь! Правда я не понимаю что именно </li>
+                <li> Што </li>
                 <li> Ммм, занятно </li>
                 <li> Умеешь ты завести диалог в тупик </li>
             </random>
