@@ -32,7 +32,6 @@ def handle_start(message):
     )
 
 
-
 @bot.message_handler(commands=["help"])
 def handle_help(message):
     bot.send_message(message.chat.id, config.help_ru)
@@ -58,8 +57,10 @@ def handle_translate(message):
     command_len = len("/translate") + 1
 
     text = message.text[command_len:]
+    stored_dest_lang = kernel.getPredicate("translate_dest_lang", message.chat.id)
+    stored_dest_lang = stored_dest_lang if stored_dest_lang in config.languages else "en"
     if text == "":
-        response_text = translate_empty("en")
+        response_text = translate_empty(stored_dest_lang)
     elif text[:2] in config.languages:
         dest = text[:2]
         text = text[3:]
@@ -68,7 +69,7 @@ def handle_translate(message):
         else:
             response_text = translator.translate(text, dest=dest).text
     else:
-        response_text = translator.translate(text, dest="en").text
+        response_text = translator.translate(text, dest=stored_dest_lang).text
 
     log_messages(
         message.text,

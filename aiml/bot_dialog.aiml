@@ -308,34 +308,45 @@
        </template>
     </category>
 
-    <!-- ПЕРЕВОД -->
-    <category>
-        <pattern> ПЕРЕВЕДИ МНЕ ТЕКСТ </pattern>
-        <template>
-            Хорошо! На какой язык?
-            <think><set name="topic">translations</set></think>
-        </template>
-    </category>
-
-    <topic name = "TRANSLATIONS">
       <category>
          <pattern> КАКИЕ ТЫ ЗНАЕШЬ ЯЗЫКИ </pattern>
          <template>
-            Английский(en), Французский(fr) и Японский(ja)\nВпринципе я могу перевести на любой другой язык, но не буду.
+            Английский(en), Французский(fr) и Японский(ja). Впринципе я могу перевести на любой другой язык, но не буду.
          </template>
       </category>
-
 
       <category>
-         <pattern> ПЕРЕВЕДИ * НА * </pattern>
+         <pattern> КАКИЕ ТЫ ЯЗЫКИ ЗНАЕШЬ </pattern>
          <template>
-             Перевод <star index="1"/> на <star index="2"/>
-            <think><set name="translate_dest_lang"><star index="2"/></set></think>
-            <think><set name="translate_text"><star index="1"/></set></think>
+            Английский(en), Французский(fr) и Японский(ja). Впринципе я могу перевести на любой другой язык, но не буду.
          </template>
       </category>
 
-    </topic>
+    <!-- ПЕРЕВОД -->
+    <category>
+        <pattern> ЗАПОМНИ ЯЗЫК ПЕРЕВОДА </pattern>
+        <template>
+            На какой язык будем переводить
+        </template>
+    </category>
+
+    <category>
+       <pattern> НА * </pattern>
+        <that>
+            НА КАКОЙ ЯЗЫК БУДЕМ ПЕРЕВОДИТЬ
+        </that>
+       <template>
+          Запомню язык <set name="translate_dest_lang"><star/></set>
+       </template>
+    </category>
+
+    <category>
+       <pattern> ЗАПОМНИ ЯЗЫК * </pattern>
+       <template>
+          Запомню язык <set name="translate_dest_lang"><star/></set>
+       </template>
+    </category>
+
 
 
     <!-- ОСТАЛЬНОЕ -->
