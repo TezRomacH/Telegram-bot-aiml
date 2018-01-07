@@ -48,7 +48,7 @@ def translate_empty(dest):
     text = random.choice(config.random_russian_words)
     response_text = config.empty_translate_text_message.format(
         text,
-        translator.translate(text, src="ru", dest=dest).text
+        translator.translate(text, dest=dest).text
     )
     return response_text
 
@@ -66,9 +66,9 @@ def handle_translate(message):
         if text == "":
             response_text = translate_empty(dest)
         else:
-            response_text = translator.translate(text, src="ru", dest=dest).text
+            response_text = translator.translate(text, dest=dest).text
     else:
-        response_text = translator.translate(text, src="ru", dest="en").text
+        response_text = translator.translate(text, dest="en").text
 
     log_messages(
         message.text,
